@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #0c061e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+#imagem-dado {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 30px;
+  margin-top: 180px;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 45px;
+}
+
+#entre,
+#ate {
+  width: 150px;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: #1b0d3a;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  caret-color: transparent;
+}
+
+button {
+  width: 220px;
+  height: 55px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 12px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #a855f7;
+
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #A855F7;
+
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+p {
+  color: white;
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+-moz-appearance: textfield;
+}
+
+#resultado {
+  animation: aparecer 0.4s ease;
+}
+
+input:focus{
+    border: 2px solid #A855F7;
+
+    box-shadow: 0 0 20px #A855F7;
+}
+
+#resultado{
+    font-size: 40px;
+
+    font-weight: 700;
+
+    color: #C084FC;
+
+    text-shadow: 0 0 20px #A855F7;
+}
+
+body{
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+@media (max-width: 468px) {
+  .inputs {
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+
+  }
+
+  #entre,
+  #ate {
+        flex-direction: column;
+
+    width: 280px;
+    max-width: 80%;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 55px;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+
+  button {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+  #imagem-dado {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 20px;
+        animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+  }
+}
