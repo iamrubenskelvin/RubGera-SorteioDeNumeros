@@ -4,13 +4,13 @@ const numberDe = document.getElementById("entre").value
 const numberAte = document.getElementById("ate").value 
 
 if (numberDe >= numberAte) {
-    alert("O número inicial deve ser menor!")
+    alert("O número inicial deve ser menor!!")
 
     return
 }
  
 if (numberDe < 0 || numberAte <0){
-    alert("Não pode números negativos!")
+    alert("Não pode números negativos!!")
 }
 
 
